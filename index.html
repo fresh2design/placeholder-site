@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>fresh2design</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #21004B;
+      background-image: url('./bits.png');
+      background-size: cover;
+      font-family: 'Nunito', 'Open Sans', sans-serif;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .card {
+      width: 160px;
+      height: 160px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 6px;
+      color: #ffffff;
+      margin: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+    }
+
+    .card > img {
+      padding: 32px;
+      padding-bottom: 48px;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="./fresh2design-branding.svg" style="margin-bottom: 64px;" />
+
+  <div class="cards">
+      <a class="card" href="https://www.meetup.com/fresh2design/">
+        <img src="./meetup.svg" width="56px" />
+        Upcoming meetups
+      </a>
+    
+      <a class="card" href="https://f2d-automate.herokuapp.com/">
+        <img src="./slack.svg" width="48px" />
+        Join us on Slack
+      </a>
+  </div>
+
+</body>
+
+</html>
