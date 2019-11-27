@@ -12,44 +12,75 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       background: #21004B;
       background-image: url('./bits.png');
-      background-size: contain;
+      background-size: 150vh;
       background-position: bottom right;
+      background-repeat: no-repeat;
       font-family: 'Nunito', 'Open Sans', sans-serif;
+    }
+
+    body > img {
+      flex-grow: 1;
     }
 
     .cards {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
+      margin-bottom: 8px;
     }
 
     .card {
-      width: 160px;
-      height: 160px;
+      width: calc(100vw - 32px);
+      box-sizing: border-box;
+      height: 128px;
       border: 2px solid rgba(255,255,255,0.5);
+      background: #21004B;
       border-radius: 6px;
       color: #ffffff;
-      margin: 16px;
+      margin: 8px 16px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      padding: 24px;
+      padding: 24px 48px;
       transition: all 0.2s ease-in-out;
       text-decoration: none;
-    }
-
-    .card > img {
-      padding: 32px;
-      padding-bottom: 48px;
+      font-size: 1.25em;
     }
 
     .card:hover {
       transform: translateY(-2px);
       border-color: #ffffff;
+    }
+
+    @media only screen and (min-width: 600px) {
+      body {
+        background-size: contain;
+        justify-content: center;
+      }
+
+      body > img {
+        flex-grow: unset;
+      }
+      
+      .cards { flex-direction: row; }
+      .card {
+        width: 196px;
+        height: 196px;
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1em;
+      }
+
+      .card > img {
+        padding: 32px;
+        padding-bottom: 48px;
+      }
     }
   </style>
 </head>
